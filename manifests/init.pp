@@ -11,4 +11,8 @@ class rspec_monitor {
   file { ['/usr/local/rspec_tests', '/usr/local/rspec_tests/spec']:
     ensure => directory,
   }
+  package { ['serverspec', 'beaker-rspec', 'rspec-nagios-formatter']:
+    ensure   => installed,
+    provider => 'gem',
+  }
 }
