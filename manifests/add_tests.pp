@@ -1,5 +1,6 @@
 define rspec_monitor::add_tests {
-  file { "/usr/local/rspec_tests/${name}":
+  
+  file { "/usr/local/rspec_tests/spec/${name}":
     ensure => directory,
     recurse => remote,
     recurselimit => 1,
