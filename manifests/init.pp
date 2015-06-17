@@ -8,7 +8,7 @@
 #   Explanation of what this parameter affects and what it defaults to.
 #
 class rspec_monitor {
-  file { [ '/usr/local/rspec_tests', '/usr/local/rspec_tests/spec':
+  file { ['/usr/local/rspec_tests', '/usr/local/rspec_tests/spec']:
     ensure => directory,
   }
 }
