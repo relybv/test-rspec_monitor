@@ -4,6 +4,6 @@ define rspec_monitor::add_tests {
     recurse      => remote,
     recurselimit => 1,
     links        => manage,
-    source       => [ "puppet:///modules/${name}/spec/acceptance", "/etc/puppet/modules/${name}/spec/acceptance" ],
+    source       => "puppet:///modules/${name}/spec/acceptance",
   }
 }
