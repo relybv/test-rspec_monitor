@@ -3,7 +3,7 @@ define rspec_monitor::add_tests {
     ensure       => directory,
     recurse      => remote,
     recurselimit => 1,
-    links        => true,
+    links        => manage,
     source       => "puppet:///modules/${name}/spec/acceptance",
   }
 }
