@@ -16,13 +16,12 @@ describe 'rspec_monitor class' do
 
 
     # default module tests
-    describe package('rspec_monitor') do
-      it { is_expected.to be_installed }
+    describe package('serverspec') do
+      it { is_expected.to be_installed.by('gem') }
     end
 
-    describe service('rspec_monitor') do
-      it { is_expected.to be_enabled }
-      it { is_expected.to be_running }
+    describe package('rspec-nagios-formatter') do
+      it { is_expected.to be_installed.by('gem') }
     end
 
   end
