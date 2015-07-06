@@ -13,14 +13,11 @@ describe 'rspec_monitor' do
 
           it { is_expected.to compile.with_all_deps }
  
-          it { is_expected.to contain_class('rspec_monitor::params') }
-          it { is_expected.to contain_class('rspec_monitor::install').that_comes_before('rspec_monitor::config') }
-          it { is_expected.to contain_class('rspec_monitor::config') }
-          it { is_expected.to contain_class('rspec_monitor::service').that_subscribes_to('rspec_monitor::config') }
-
-          it { is_expected.to contain_service('rspec_monitor') }
-          it { is_expected.to contain_package('rspec_monitor').with_ensure('present') }
-
+          it { is_expected.to contain_class('rspec_monitor') }
+          it { is_expected.to contain_package('rspec-nagios-formatter').with_provider('gem') }
+          it { is_expected.to contain_package('serverspec').with_provider('gem') }
+          it { is_expected.to contain_file('/usr/local/rspec_tests/spec').with_ensure('directory') }
+          it { is_expected.to contain_file('/usr/local/rspec_tests').with_ensure('directory') }
         end
       end
     end
