@@ -1,0 +1,8 @@
+fixtures:
+  repositories:
+    stdlib: "https://github.com/puppetlabs/puppetlabs-stdlib.git"
+ 
+# default module layout
+
+  symlinks:
+    rspec_monitor: "#{source_dir}"
