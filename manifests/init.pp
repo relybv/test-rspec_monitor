@@ -13,6 +13,6 @@ class rspec_monitor {
   }
   package { ['serverspec', 'rspec-nagios-formatter']:
     ensure   => installed,
-    provider => 'gem',
+    provider => 'puppet_gem',
   }
 }
