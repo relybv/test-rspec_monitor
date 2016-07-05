@@ -11,7 +11,7 @@ class rspec_monitor {
   file { ['/usr/local/rspec_tests', '/usr/local/rspec_tests/spec']:
     ensure => directory,
   }
-  package { ['serverspec', 'rspec-nagios-formatter']:
+  package { ['serverspec', 'rspec-nagios-formatter', 'rspec-legacy_formatters']:
     ensure   => installed,
     provider => 'puppet_gem',
   }
